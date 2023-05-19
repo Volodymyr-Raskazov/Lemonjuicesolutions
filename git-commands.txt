@@ -1,0 +1,7 @@
+cd "repo dir on local"
+git init
+git remote add origin https://github.com/Volodymyr-Raskazov/Lemonjuicesolutions.git
+git branch -M main
+git add .
+git commit -m "first commit"
+git push -u origin main

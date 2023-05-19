@@ -8,30 +8,85 @@
 
 // Set variables ==============================================================
 
-$baseFont: Comfortaa;
-
+$baseFont: Raleway;
+$secondFont: "Playfair Display";
 // Base styles ================================================================
 body {
 	font-family: $baseFont;
-	color: #f5f5f5;
-	background-color: #262c37;
+	font-weight: 400;
 }
 
 .wrapper {
+	display: flex;
+	flex-direction: column;
 	min-height: 100%;
 	overflow: clip;
 }
 
 [class*="__container"] {
-	max-width: 81.25rem;
-	margin: 0 auto;
+	max-width: 73.25rem;
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
+	margin: 0 auto;
+}
+.header {
 }
 
+.main {
+	flex: 1 1 auto;
+}
+
+.footer {
+}
 // Header =====================================================================
+.header {
+	&__top {
+		background: #f6f7eb;
+		// padding: 11px 0 10px 0;
+	}
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		// min-height: 45px;
+	}
 
+	&__link {
+		padding-left: 30px;
+		background-repeat: no-repeat;
+		background-position: 0 3px;
+		a {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 160%;
+			color: #333333;
+		}
+	}
 
+	&__link_adress {
+		background-image: url("/img/svg/place.svg");
+	}
+
+	&__link_email {
+		background-image: url("/img/svg/email.svg");
+	}
+
+	&__link_phone {
+		background-image: url("/img/svg/phone.svg");
+	}
+
+	&__button {
+		font-size: 15px;
+		line-height: 18px;
+		text-transform: uppercase;
+		color: #4f4f4f;
+		background: #e9ce0b;
+		padding: 0 68px 0 68px;
+		min-height: 45px;
+	}
+}
+//=============================================================================
 // Main =======================================================================
 
 // ============================================================================
