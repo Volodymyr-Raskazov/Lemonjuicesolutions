@@ -42,51 +42,52 @@ body {
 .header {
 	&__top {
 		background: #f6f7eb;
-		// padding: 11px 0 10px 0;
 	}
-	&__links {
+
+	&__menu {
+	}
+}
+.top-header {
+	&__items {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		// min-height: 45px;
+		min-height: 45px;
 	}
 
-	&__link {
+	&__item {
 		padding-left: 30px;
 		background-repeat: no-repeat;
-		background-position: 0 3px;
-		a {
-			font-style: normal;
-			font-weight: 400;
-			font-size: 15px;
-			line-height: 160%;
-			color: #333333;
+		background-position: 0 2px;
+		// background-size: contain;
+		&.address {
+			background-image: url("/img/svg/place.svg");
+		}
+		&.email {
+			background-image: url("/img/svg/email.svg");
+		}
+		&.phone {
+			background-image: url("/img/svg/phone.svg");
 		}
 	}
 
-	&__link_adress {
-		background-image: url("/img/svg/place.svg");
-	}
-
-	&__link_email {
-		background-image: url("/img/svg/email.svg");
-	}
-
-	&__link_phone {
-		background-image: url("/img/svg/phone.svg");
+	&__link {
+		font-size: 15px;
+		line-height: 160%;
+		color: #333333;
 	}
 
 	&__button {
+		background: #e9ce0b;
 		font-size: 15px;
-		line-height: 18px;
+		line-height: 45px;
+		padding: 0 68px;
 		text-transform: uppercase;
 		color: #4f4f4f;
-		background: #e9ce0b;
-		padding: 0 68px 0 68px;
-		min-height: 45px;
 	}
 }
 //=============================================================================
+
 // Main =======================================================================
 
 // ============================================================================
