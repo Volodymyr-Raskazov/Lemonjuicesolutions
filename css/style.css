@@ -130,16 +130,31 @@ body {
 }
 
 [class*=__container] {
-  max-width: 73.25rem;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  max-width: 1172px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
-.main {
+.page-content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.button {
+  display: inline-block;
+  background: #a6b03b;
+  padding: 16px 86px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.button:hover {
+  background-color: #c5d147;
 }
 
 /* header top */
@@ -172,6 +187,15 @@ body {
   .top-header__items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 425px) {
+  .top-header__items {
+    min-height: 40px;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .top-header__item {
@@ -255,6 +279,11 @@ body {
             justify-content: space-between;
   }
 }
+@media (max-width: 425px) {
+  .menu-header__container {
+    min-height: 80px;
+  }
+}
 .menu-header__logo {
   margin-right: 124px;
 }
@@ -287,7 +316,7 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 130px);
     top: 130px;
     right: -100%;
     background-color: #ffffff;
@@ -297,7 +326,16 @@ body {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     overflow: auto;
+    z-index: 50;
   }
+}
+@media (max-width: 425px) {
+  .menu__list {
+    top: 120px;
+  }
+}
+.menu__item {
+  position: relative;
 }
 .menu__item:last-child {
   padding-left: 43px;
@@ -314,6 +352,15 @@ body {
   .menu__item:not(:last-child) {
     margin-right: 0;
   }
+}
+.menu__item_down::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 82px;
+  width: 100%;
+  height: 100%;
+  background: url("/img/svg/next.svg") 0 0 no-repeat;
 }
 .menu__link {
   text-transform: uppercase;
@@ -382,3 +429,66 @@ body {
 }
 
 /*---------------*/
+/* section resorts*/
+.resorts__body {
+  position: relative;
+  z-index: 1;
+}
+.resorts__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.resorts__image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.resorts__container {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+.resorts__info {
+  padding-top: 194px;
+}
+.resorts__title {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 62px;
+}
+@media (max-width: 425px) {
+  .resorts__title {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+.resorts__button {
+  margin-bottom: 201px;
+}
+.resorts__article {
+  background: #f6f7eb;
+  padding: 42px 0px 0px 0px;
+}
+.resorts__subtitle {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-family: "Playfair Display";
+  color: #495f1d;
+}

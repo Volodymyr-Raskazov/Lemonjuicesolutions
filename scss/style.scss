@@ -28,25 +28,39 @@ body {
 }
 
 [class*="__container"] {
-	max-width: 73.25rem;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+	max-width: 1172px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 
 .header {
-	// position: fixed;
-	// left: 0;
-	// top: 0;
-	// width: 100%;
-	// z-index: 50;
 }
 
-.main {
+.page-content {
 	flex: 1 1 auto;
+}
+.page-content {
+	&__resorts {
+	}
 }
 
 .footer {
+}
+
+.button {
+	display: inline-block;
+	background: #a6b03b;
+	padding: 16px 86px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	&:hover {
+		background-color: #c5d147;
+	}
 }
 // Header =====================================================================
 /* header top */
@@ -68,6 +82,11 @@ body {
 		min-height: 45px;
 		@media (max-width: 1100px) {
 			flex-wrap: wrap;
+		}
+		@media (max-width: 425px) {
+			min-height: 40px;
+			width: 100%;
+			justify-content: space-between;
 		}
 	}
 
@@ -138,6 +157,9 @@ body {
 		@media (max-width: 768px) {
 			justify-content: space-between;
 		}
+		@media (max-width: 425px) {
+			min-height: 80px;
+		}
 	}
 
 	&__logo {
@@ -161,7 +183,7 @@ body {
 			flex-direction: column;
 			flex-wrap: nowrap;
 			width: 100%;
-			height: 100%;
+			height: calc(100% - 130px);
 			top: 130px;
 			right: -100%;
 			background-color: #ffffff;
@@ -169,11 +191,15 @@ body {
 			gap: 15px;
 			transition: all 0.3s;
 			overflow: auto;
-			// z-index: 1;
+			z-index: 50;
+		}
+		@media (max-width: 425px) {
+			top: 120px;
 		}
 	}
 
 	&__item {
+		position: relative;
 		&:last-child {
 			padding-left: 43px;
 			@media (max-width: 768px) {
@@ -186,6 +212,16 @@ body {
 				margin-right: 0;
 			}
 		}
+	}
+
+	&__item_down::after {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 82px;
+		width: 100%;
+		height: 100%;
+		background: url("/img/svg/next.svg") 0 0 no-repeat;
 	}
 
 	&__link {
@@ -253,6 +289,76 @@ body {
 /*---------------*/
 
 // Main =======================================================================
+/* section resorts*/
+.resorts {
+	&__body {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+		}
+	}
+
+	&__container {
+		position: relative;
+		text-align: center;
+		z-index: 2;
+	}
+
+	&__info {
+		padding-top: 194px;
+	}
+
+	&__title {
+		font-family: $secondFont;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 80px;
+		text-align: center;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+		margin-bottom: 62px;
+		@media (max-width: 425px) {
+			font-size: 33px;
+			line-height: 44px;
+		}
+	}
+
+	&__button {
+		margin-bottom: 201px;
+	}
+
+	&__article {
+		background: #f6f7eb;
+		padding: 42px 0px 0px 0px;
+	}
+
+	&__subtitle {
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		font-family: $secondFont;
+		color: #495f1d;
+	}
+
+	&__label {
+	}
+}
 
 // ============================================================================
 
