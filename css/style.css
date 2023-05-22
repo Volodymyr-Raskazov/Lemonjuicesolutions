@@ -130,7 +130,7 @@ body {
 }
 
 [class*=__container] {
-  max-width: 1172px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -142,8 +142,29 @@ body {
           flex: 1 1 auto;
 }
 
-.button {
-  display: inline-block;
+.page-content__resorts {
+  background: #f6f7eb;
+}
+.page-content__about {
+  background: #ffffff;
+}
+.page-content__mission {
+  background: #f6f7eb;
+}
+
+.btn {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #a6b03b;
   padding: 16px 86px;
   font-weight: 700;
@@ -153,8 +174,29 @@ body {
   text-transform: uppercase;
   color: #ffffff;
 }
-.button:hover {
+.btn:hover {
   background-color: #c5d147;
+}
+
+.title {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 53px;
+  color: #495f1d;
+}
+@media (max-width: 425px) {
+  .title {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+
+.text {
+  font-size: 15px;
+  line-height: 160%;
+  color: #333333;
 }
 
 /* header top */
@@ -241,6 +283,15 @@ body {
   }
 }
 .top-header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #e9ce0b;
   font-size: 15px;
   line-height: 45px;
@@ -368,6 +419,9 @@ body {
   line-height: 18px;
   color: #333333;
 }
+.menu__link:hover {
+  text-decoration: underline;
+}
 .menu__icon {
   display: none;
 }
@@ -430,11 +484,11 @@ body {
 
 /*---------------*/
 /* section resorts*/
-.resorts__body {
+.resorts-section__body {
   position: relative;
   z-index: 1;
 }
-.resorts__image {
+.resorts-section__image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -443,7 +497,7 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.resorts__image::after {
+.resorts-section__image::after {
   content: "";
   position: absolute;
   left: 0;
@@ -454,15 +508,27 @@ body {
   background: -o-linear-gradient(top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
 }
-.resorts__container {
+.resorts-section__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  text-align: center;
   z-index: 2;
-}
-.resorts__info {
   padding-top: 194px;
+  padding-bottom: 201px;
+  text-align: center;
 }
-.resorts__title {
+.resorts-section__title {
   font-family: "Playfair Display";
   font-weight: 700;
   font-size: 60px;
@@ -473,22 +539,222 @@ body {
   margin-bottom: 62px;
 }
 @media (max-width: 425px) {
-  .resorts__title {
+  .resorts-section__title {
     font-size: 33px;
     line-height: 44px;
   }
 }
-.resorts__button {
-  margin-bottom: 201px;
-}
-.resorts__article {
+.resorts-section__article {
   background: #f6f7eb;
-  padding: 42px 0px 0px 0px;
+  padding: 42px 0px 40px 0px;
+  text-align: center;
 }
-.resorts__subtitle {
+.resorts-section__subtitle {
   font-size: 30px;
   line-height: 40px;
   text-align: center;
   font-family: "Playfair Display";
   color: #495f1d;
+  margin: 0px 0px 20px 0px;
+}
+.resorts-section__label {
+  font-size: 15px;
+  line-height: 18px;
+  color: #333333;
+}
+
+/* section aboute*/
+.about-section__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0px 53px 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 425px) {
+  .about-section__content {
+    padding: 40px 0px 40px 0px;
+  }
+}
+.about-section__title {
+  margin: 0px 0px 36px 0px;
+}
+.about-section__text {
+  max-width: 805px;
+  text-align: center;
+}
+.about-section__text:not(:last-child) {
+  margin: 0px 0px 24px 0px;
+}
+.about-section__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin: 0px 0px 88px 0px;
+}
+@media (max-width: 768px) {
+  .about-section__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.about-section__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f6f7eb;
+  padding: 31px 53px 45px;
+}
+.about-section__item:hover {
+  background-color: #a6b03b;
+}
+.about-section__item:hover > * {
+  color: #ffffff;
+}
+.about-section__item:hover .item-about__subtitle {
+  text-transform: uppercase;
+}
+.about-section__item:hover .support {
+  background-image: url("/img/svg/support_w.svg");
+}
+.about-section__item:hover .partner {
+  background-image: url("/img/svg/partner_w.svg");
+}
+.about-section__item:hover .leader {
+  background-image: url("/img/svg/leader_w.svg");
+}
+
+.item-about__img {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-bottom: 32px;
+}
+.item-about__img.support {
+  background-image: url("/img/svg/support.svg");
+}
+.item-about__img.partner {
+  background-image: url("/img/svg/partner.svg");
+}
+.item-about__img.leader {
+  background-image: url("/img/svg/leader.svg");
+}
+.item-about__subtitle {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #495f1d;
+  margin: 0px 0px 12px 0px;
+}
+.item-about__text {
+  text-align: center;
+}
+
+/* section mission*/
+.mission-section__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .mission-section__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+.mission-section__content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 49%;
+          flex: 1 0 49%;
+  position: relative;
+  padding: 143px 0px 172px 0px;
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  .mission-section__content {
+    padding: 43px 0px 43px 0px;
+  }
+}
+.mission-section__content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -55%;
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/section-mission/logo-w.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+}
+@media (max-width: 1024px) {
+  .mission-section__content::after {
+    top: 12.5%;
+    right: -17%;
+    height: 75%;
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  .mission-section__content::after {
+    right: -25%;
+  }
+}
+@media (max-width: 425px) {
+  .mission-section__content::after {
+    right: -40%;
+  }
+}
+.mission-section__title {
+  padding: 0px 0px 39px 0px;
+}
+.mission-section__text {
+  padding: 0px 0px 34px 0px;
+}
+.mission-section__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .mission-section__image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding-bottom: 50%;
+  }
 }

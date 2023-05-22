@@ -28,7 +28,7 @@ body {
 }
 
 [class*="__container"] {
-	max-width: 1172px;
+	max-width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
@@ -40,16 +40,27 @@ body {
 .page-content {
 	flex: 1 1 auto;
 }
+
 .page-content {
 	&__resorts {
+		background: #f6f7eb;
+	}
+	&__about {
+		background: #ffffff;
+	}
+	&__mission {
+		background: #f6f7eb;
 	}
 }
 
 .footer {
 }
 
-.button {
-	display: inline-block;
+.btn {
+	max-width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background: #a6b03b;
 	padding: 16px 86px;
 	font-weight: 700;
@@ -62,6 +73,26 @@ body {
 		background-color: #c5d147;
 	}
 }
+
+.title {
+	font-family: $secondFont;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 53px;
+	color: #495f1d;
+	@media (max-width: 425px) {
+		font-size: 33px;
+		line-height: 44px;
+	}
+}
+
+.text {
+	font-size: 15px;
+	line-height: 160%;
+	color: #333333;
+}
+
 // Header =====================================================================
 /* header top */
 .header {
@@ -127,6 +158,9 @@ body {
 	}
 
 	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background: #e9ce0b;
 		font-size: 15px;
 		line-height: 45px;
@@ -229,6 +263,9 @@ body {
 		font-size: 15px;
 		line-height: 18px;
 		color: #333333;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__icon {
@@ -290,7 +327,7 @@ body {
 
 // Main =======================================================================
 /* section resorts*/
-.resorts {
+.resorts-section {
 	&__body {
 		position: relative;
 		z-index: 1;
@@ -314,14 +351,16 @@ body {
 		}
 	}
 
-	&__container {
-		position: relative;
-		text-align: center;
-		z-index: 2;
-	}
-
 	&__info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		z-index: 2;
 		padding-top: 194px;
+		padding-bottom: 201px;
+		text-align: center;
 	}
 
 	&__title {
@@ -340,12 +379,12 @@ body {
 	}
 
 	&__button {
-		margin-bottom: 201px;
 	}
 
 	&__article {
 		background: #f6f7eb;
-		padding: 42px 0px 0px 0px;
+		padding: 42px 0px 40px 0px;
+		text-align: center;
 	}
 
 	&__subtitle {
@@ -354,9 +393,179 @@ body {
 		text-align: center;
 		font-family: $secondFont;
 		color: #495f1d;
+		margin: 0px 0px 20px 0px;
 	}
 
 	&__label {
+		font-size: 15px;
+		line-height: 18px;
+		color: #333333;
+	}
+}
+
+/* section aboute*/
+
+.about-section {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 50px 0px 53px 0px;
+		align-items: center;
+		@media (max-width: 425px) {
+			padding: 40px 0px 40px 0px;
+		}
+	}
+
+	&__title {
+		margin: 0px 0px 36px 0px;
+	}
+
+	&__text {
+		max-width: 805px;
+		text-align: center;
+		&:not(:last-child) {
+			margin: 0px 0px 24px 0px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		gap: 30px;
+		margin: 0px 0px 88px 0px;
+		@media (max-width: 768px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #f6f7eb;
+		padding: 31px 53px 45px;
+		&:hover {
+			background-color: #a6b03b;
+		}
+		&:hover > * {
+			color: #ffffff;
+		}
+		&:hover .item-about__subtitle {
+			text-transform: uppercase;
+		}
+		&:hover .support {
+			background-image: url("/img/svg/support_w.svg");
+		}
+		&:hover .partner {
+			background-image: url("/img/svg/partner_w.svg");
+		}
+		&:hover .leader {
+			background-image: url("/img/svg/leader_w.svg");
+		}
+	}
+}
+
+.item-about {
+	&__img {
+		width: 60px;
+		height: 60px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: contain;
+		margin-bottom: 32px;
+		&.support {
+			background-image: url("/img/svg/support.svg");
+		}
+		&.partner {
+			background-image: url("/img/svg/partner.svg");
+		}
+		&.leader {
+			background-image: url("/img/svg/leader.svg");
+		}
+	}
+
+	&__subtitle {
+		font-family: $secondFont;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 120%;
+		text-align: center;
+		text-transform: capitalize;
+		color: #495f1d;
+		margin: 0px 0px 12px 0px;
+	}
+
+	&__text {
+		text-align: center;
+	}
+}
+
+/* section mission*/
+.mission-section {
+	&__body {
+		display: flex;
+		@media (max-width: 1024px) {
+			flex-direction: column-reverse;
+		}
+	}
+	&__content {
+		flex: 1 0 49%;
+		position: relative;
+		padding: 143px 0px 172px 0px;
+		z-index: 10;
+		@media (max-width: 1024px) {
+			padding: 43px 0px 43px 0px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: -55%;
+			height: 100%;
+			width: 100%;
+			background-image: url("/img/section-mission/logo-w.png");
+			background-repeat: no-repeat;
+			background-position: center right;
+			background-size: contain;
+			@media (max-width: 1024px) {
+				top: 12.5%;
+				right: -17%;
+				height: 75%;
+				width: 75%;
+			}
+			@media (max-width: 768px) {
+				right: -25%;
+			}
+			@media (max-width: 425px) {
+				right: -40%;
+			}
+		}
+	}
+
+	&__title {
+		padding: 0px 0px 39px 0px;
+	}
+
+	&__text {
+		padding: 0px 0px 34px 0px;
+	}
+
+	&__link {
+	}
+
+	&__image {
+		flex: 0 0 100%;
+		z-index: 10;
+		width: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+		@media (max-width: 1024px) {
+			flex: 1 1 100%;
+			padding-bottom: 50%;
+		}
 	}
 }
 
