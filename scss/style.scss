@@ -127,7 +127,7 @@ body {
 		background-position: 0 center;
 		background-size: auto 100%;
 		&.address {
-			background-image: url("/img/svg/place.svg");
+			background-image: url("../img/svg/place.svg");
 			margin-right: 48px;
 			@media (max-width: 768px) {
 				margin-right: 15px;
@@ -137,14 +137,14 @@ body {
 			}
 		}
 		&.email {
-			background-image: url("/img/svg/email.svg");
+			background-image: url("../img/svg/email.svg");
 			margin-right: 99px;
 			@media (max-width: 768px) {
 				margin-right: 15px;
 			}
 		}
 		&.phone {
-			background-image: url("/img/svg/phone.svg");
+			background-image: url("../img/svg/phone.svg");
 		}
 	}
 
@@ -255,7 +255,7 @@ body {
 		left: 82px;
 		width: 100%;
 		height: 100%;
-		background: url("/img/svg/next.svg") 0 0 no-repeat;
+		background: url("../img/svg/next.svg") 0 0 no-repeat;
 	}
 
 	&__link {
@@ -455,13 +455,13 @@ body {
 			text-transform: uppercase;
 		}
 		&:hover .support {
-			background-image: url("/img/svg/support_w.svg");
+			background-image: url("../img/svg/support_w.svg");
 		}
 		&:hover .partner {
-			background-image: url("/img/svg/partner_w.svg");
+			background-image: url("../img/svg/partner_w.svg");
 		}
 		&:hover .leader {
-			background-image: url("/img/svg/leader_w.svg");
+			background-image: url("../img/svg/leader_w.svg");
 		}
 	}
 }
@@ -475,13 +475,13 @@ body {
 		background-size: contain;
 		margin-bottom: 32px;
 		&.support {
-			background-image: url("/img/svg/support.svg");
+			background-image: url("../img/svg/support.svg");
 		}
 		&.partner {
-			background-image: url("/img/svg/partner.svg");
+			background-image: url("../img/svg/partner.svg");
 		}
 		&.leader {
-			background-image: url("/img/svg/leader.svg");
+			background-image: url("../img/svg/leader.svg");
 		}
 	}
 
@@ -525,7 +525,7 @@ body {
 			right: -55%;
 			height: 100%;
 			width: 100%;
-			background-image: url("/img/section-mission/logo-w.png");
+			background-image: url("../img/section-mission/logo-w.png");
 			background-repeat: no-repeat;
 			background-position: center right;
 			background-size: contain;
