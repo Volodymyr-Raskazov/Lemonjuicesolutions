@@ -250,7 +250,7 @@ body {
   background-size: auto 100%;
 }
 .top-header__item.address {
-  background-image: url("./img/svg/place.svg");
+  background-image: url("../img/svg/place.svg");
   background-image: url("/img/svg/place.svg");
   margin-right: 48px;
 }
@@ -265,7 +265,7 @@ body {
   }
 }
 .top-header__item.email {
-  background-image: url("./img/svg/email.svg");
+  background-image: url("../img/svg/email.svg");
   background-image: url("/img/svg/email.svg");
   margin-right: 99px;
 }
@@ -275,7 +275,7 @@ body {
   }
 }
 .top-header__item.phone {
-  background-image: url("./img/svg/phone.svg");
+  background-image: url("../img/svg/phone.svg");
   background-image: url("/img/svg/phone.svg");
 }
 .top-header__link {
@@ -416,7 +416,7 @@ body {
   left: 82px;
   width: 100%;
   height: 100%;
-  background: url("./img/svg/next.svg") 0 0 no-repeat;
+  background: url("../img/svg/next.svg") 0 0 no-repeat;
   background: url("/img/svg/next.svg") 0 0 no-repeat;
 }
 .menu__link {
@@ -647,15 +647,15 @@ body {
   text-transform: uppercase;
 }
 .about-section__item:hover .support {
-  background-image: url("./img/svg/support_w.svg");
+  background-image: url("../img/svg/support_w.svg");
   background-image: url("/img/svg/support_w.svg");
 }
 .about-section__item:hover .partner {
-  background-image: url("./img/svg/partner_w.svg");
+  background-image: url("../img/svg/partner_w.svg");
   background-image: url("/img/svg/partner_w.svg");
 }
 .about-section__item:hover .leader {
-  background-image: url("./img/svg/leader_w.svg");
+  background-image: url("../img/svg/leader_w.svg");
   background-image: url("/img/svg/leader_w.svg");
 }
 
@@ -668,15 +668,15 @@ body {
   margin-bottom: 32px;
 }
 .item-about__img.support {
-  background-image: url("./img/svg/support.svg");
+  background-image: url("../img/svg/support.svg");
   background-image: url("/img/svg/support.svg");
 }
 .item-about__img.partner {
-  background-image: url("./img/svg/partner.svg");
+  background-image: url("../img/svg/partner.svg");
   background-image: url("/img/svg/partner.svg");
 }
 .item-about__img.leader {
-  background-image: url("./img/svg/leader.svg");
+  background-image: url("../img/svg/leader.svg");
   background-image: url("/img/svg/leader.svg");
 }
 .item-about__subtitle {
@@ -729,7 +729,7 @@ body {
   right: -55%;
   height: 100%;
   width: 100%;
-  background-image: url("./img/svg/lemon-logo.svg");
+  background-image: url("../img/svg/lemon-logo.svg");
   background-image: url("/img/svg/lemon-logo.svg");
   background-repeat: no-repeat;
   background-position: center right;
@@ -832,7 +832,7 @@ body {
   right: -70%;
   height: 100%;
   width: 100%;
-  background-image: url("./img/svg/lemon-logo.svg");
+  background-image: url("../img/svg/lemon-logo.svg");
   background-image: url("/img/svg/lemon-logo.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
