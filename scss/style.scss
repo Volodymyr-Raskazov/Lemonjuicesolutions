@@ -590,8 +590,6 @@ body {
 
 /* section success */
 
-.page-content {
-}
 .success-section {
 	&__body {
 		display: flex;
@@ -608,6 +606,7 @@ body {
 		top: 0;
 		@media (max-width: 1024px) {
 			flex: 1 1 100%;
+			left: 0;
 			padding-bottom: 50%;
 		}
 	}
@@ -678,7 +677,7 @@ body {
 .achievements-section {
 	&__background {
 		z-index: 10;
-		padding: 0px 0px 450px 0px;
+		padding-bottom: 23.5%;
 		&::after {
 			content: "";
 			position: absolute;
@@ -688,26 +687,65 @@ body {
 			height: 100%;
 			background: linear-gradient(180deg, #000000 21.11%, rgba(0, 0, 0, 0.15) 95.74%);
 		}
+		@media (max-width: 768px) {
+			padding-bottom: 30%;
+		}
+		@media (max-width: 425px) {
+			padding-bottom: 155%;
+		}
+		@media (max-width: 320px) {
+			padding-bottom: 210%;
+		}
+	}
+
+	&__container {
+		position: relative;
 	}
 
 	&__elements {
+		position: absolute;
+		top: 40px;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		display: flex;
+		gap: 20px;
 		justify-content: space-between;
+		margin: -335px 0px 0px 0px;
+		@media (max-width: 1440px) {
+			margin: -300px 0px 0px 0px;
+		}
+		@media (max-width: 1024px) {
+			padding: 0 15px;
+			margin: -260px 0px 0px 0px;
+		}
+		@media (max-width: 425px) {
+			flex-direction: column;
+			align-items: center;
+			margin: -765px 0px 0px 0px;
+		}
+		@media (max-width: 425px) {
+			margin: -680px 0px 0px 0px;
+		}
 	}
 
 	&__element {
 		position: relative;
-		max-height: 210px;
-		margin: -325px 0px 0px 0px;
+		height: 200px;
+		width: 195px;
+		// margin: -325px 0px 0px 0px;
 		z-index: 10;
+		// @media (max-width: 425px) {
+		// 	margin: -410px 0px -220px 0px;
+		// }
 	}
 
 	&__element-label {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		min-height: 80px;
-		min-width: 100px;
+		// min-height: 80px;
+		// min-width: 100px;
 		font-weight: 700;
 		font-size: 15px;
 		line-height: 160%;
