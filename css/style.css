@@ -126,6 +126,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -142,9 +143,9 @@ h6 {
 .slider__item {
   position: relative;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  max-width: 100%;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 50%;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -1220,18 +1221,21 @@ body {
 
 /* section testimonials */
 .testimonials-section__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 94px 0px 132px 0px;
 }
-.testimonials-section__title {
-  position: relative;
+.testimonials-section__worldmap {
   display: inline-block;
-  min-height: 67.1428%;
-  max-width: 69%;
+  height: 470px;
+  width: 800px;
+  min-width: 66.6666px;
   background-image: url("../img/section-testimonials/frame.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
-  padding: 169px 416px 248px 145px;
+  padding: 169px 0px 0px 145px;
   margin: 26px 0px 0px -145px;
 }
 .testimonials-section__slider {

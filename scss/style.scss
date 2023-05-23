@@ -854,21 +854,24 @@ body {
 
 .testimonials-section {
 	&__body {
+		display: flex;
 		padding: 94px 0px 132px 0px;
 	}
-
-	&__title {
-		position: relative;
+	&__worldmap {
 		display: inline-block;
-		min-height: 67.1428%;
-		max-width: 69%;
-		// min-width: 66.6666px;
+		height: 470px;
+		width: 800px;
+		// min-height: 67.1428%;
+		// max-width: 69%;
+		min-width: 66.6666px;
 		background-image: url("../img/section-testimonials/frame.svg");
 		background-repeat: no-repeat;
 		background-position: 0 0;
 		background-size: contain;
-		padding: 169px 416px 248px 145px;
+		padding: 169px 0px 0px 145px;
 		margin: 26px 0px 0px -145px;
+	}
+	&__title {
 	}
 
 	&__slider {
