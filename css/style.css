@@ -154,7 +154,6 @@ body {
 .page-content__success {
   background: #f6f7eb;
 }
-
 .btn {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -251,7 +250,6 @@ body {
 }
 .top-header__item.address {
   background-image: url("../img/svg/place.svg");
-  background-image: url("/img/svg/place.svg");
   margin-right: 48px;
 }
 @media (max-width: 768px) {
@@ -266,7 +264,6 @@ body {
 }
 .top-header__item.email {
   background-image: url("../img/svg/email.svg");
-  background-image: url("/img/svg/email.svg");
   margin-right: 99px;
 }
 @media (max-width: 768px) {
@@ -276,7 +273,6 @@ body {
 }
 .top-header__item.phone {
   background-image: url("../img/svg/phone.svg");
-  background-image: url("/img/svg/phone.svg");
 }
 .top-header__link {
   font-size: 15px;
@@ -417,7 +413,6 @@ body {
   width: 100%;
   height: 100%;
   background: url("../img/svg/next.svg") 0 0 no-repeat;
-  background: url("/img/svg/next.svg") 0 0 no-repeat;
 }
 .menu__link {
   text-transform: uppercase;
@@ -648,15 +643,12 @@ body {
 }
 .about-section__item:hover .support {
   background-image: url("../img/svg/support_w.svg");
-  background-image: url("/img/svg/support_w.svg");
 }
 .about-section__item:hover .partner {
   background-image: url("../img/svg/partner_w.svg");
-  background-image: url("/img/svg/partner_w.svg");
 }
 .about-section__item:hover .leader {
   background-image: url("../img/svg/leader_w.svg");
-  background-image: url("/img/svg/leader_w.svg");
 }
 
 .item-about__img {
@@ -669,15 +661,12 @@ body {
 }
 .item-about__img.support {
   background-image: url("../img/svg/support.svg");
-  background-image: url("/img/svg/support.svg");
 }
 .item-about__img.partner {
   background-image: url("../img/svg/partner.svg");
-  background-image: url("/img/svg/partner.svg");
 }
 .item-about__img.leader {
   background-image: url("../img/svg/leader.svg");
-  background-image: url("/img/svg/leader.svg");
 }
 .item-about__subtitle {
   font-family: "Playfair Display";
@@ -730,7 +719,6 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("../img/svg/lemon-logo.svg");
-  background-image: url("/img/svg/lemon-logo.svg");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: contain;
@@ -833,7 +821,6 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("../img/svg/lemon-logo.svg");
-  background-image: url("/img/svg/lemon-logo.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;
@@ -879,4 +866,58 @@ body {
 }
 .success-section__text {
   padding: 0px 0px 34px 0px;
+}
+/* section achievements */
+.achievements-section__background {
+  z-index: 10;
+  padding: 0px 0px 450px 0px;
+}
+.achievements-section__background::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(21.11%, #000000), color-stop(95.74%, rgba(0, 0, 0, 0.15)));
+  background: -o-linear-gradient(top, #000000 21.11%, rgba(0, 0, 0, 0.15) 95.74%);
+  background: linear-gradient(180deg, #000000 21.11%, rgba(0, 0, 0, 0.15) 95.74%);
+}
+.achievements-section__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.achievements-section__element {
+  position: relative;
+  max-height: 210px;
+  margin: -325px 0px 0px 0px;
+  z-index: 10;
+}
+.achievements-section__element-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-height: 80px;
+  min-width: 100px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 95px 0px 0px 0px;
+}
+.achievements-section__element-label.villas {
+  background-image: url("../img/section-achievements/50.svg");
+}
+.achievements-section__element-label.experience {
+  background-image: url("../img/section-achievements/10.svg");
+}
+.achievements-section__element-label.customers {
+  background-image: url("../img/section-achievements/85.svg");
 }

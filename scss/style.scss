@@ -54,6 +54,8 @@ body {
 	&__success {
 		background: #f6f7eb;
 	}
+	&__achievements {
+	}
 }
 
 .footer {
@@ -131,7 +133,7 @@ body {
 		background-size: auto 100%;
 		&.address {
 			background-image: url("../img/svg/place.svg");
-			background-image: url("/img/svg/place.svg");
+			// background-image: url("/img/svg/place.svg");
 			margin-right: 48px;
 			@media (max-width: 768px) {
 				margin-right: 15px;
@@ -142,7 +144,7 @@ body {
 		}
 		&.email {
 			background-image: url("../img/svg/email.svg");
-			background-image: url("/img/svg/email.svg");
+			// background-image: url("/img/svg/email.svg");
 			margin-right: 99px;
 			@media (max-width: 768px) {
 				margin-right: 15px;
@@ -150,7 +152,7 @@ body {
 		}
 		&.phone {
 			background-image: url("../img/svg/phone.svg");
-			background-image: url("/img/svg/phone.svg");
+			// background-image: url("/img/svg/phone.svg");
 		}
 	}
 
@@ -262,7 +264,7 @@ body {
 		width: 100%;
 		height: 100%;
 		background: url("../img/svg/next.svg") 0 0 no-repeat;
-		background: url("/img/svg/next.svg") 0 0 no-repeat;
+		// background: url("/img/svg/next.svg") 0 0 no-repeat;
 	}
 
 	&__link {
@@ -467,15 +469,15 @@ body {
 		}
 		&:hover .support {
 			background-image: url("../img/svg/support_w.svg");
-			background-image: url("/img/svg/support_w.svg");
+			// background-image: url("/img/svg/support_w.svg");
 		}
 		&:hover .partner {
 			background-image: url("../img/svg/partner_w.svg");
-			background-image: url("/img/svg/partner_w.svg");
+			// background-image: url("/img/svg/partner_w.svg");
 		}
 		&:hover .leader {
 			background-image: url("../img/svg/leader_w.svg");
-			background-image: url("/img/svg/leader_w.svg");
+			// background-image: url("/img/svg/leader_w.svg");
 		}
 	}
 }
@@ -490,15 +492,15 @@ body {
 		margin-bottom: 32px;
 		&.support {
 			background-image: url("../img/svg/support.svg");
-			background-image: url("/img/svg/support.svg");
+			// background-image: url("/img/svg/support.svg");
 		}
 		&.partner {
 			background-image: url("../img/svg/partner.svg");
-			background-image: url("/img/svg/partner.svg");
+			// background-image: url("/img/svg/partner.svg");
 		}
 		&.leader {
 			background-image: url("../img/svg/leader.svg");
-			background-image: url("/img/svg/leader.svg");
+			// background-image: url("/img/svg/leader.svg");
 		}
 	}
 
@@ -544,7 +546,7 @@ body {
 			height: 100%;
 			width: 100%;
 			background-image: url("../img/svg/lemon-logo.svg");
-			background-image: url("/img/svg/lemon-logo.svg");
+			// background-image: url("/img/svg/lemon-logo.svg");
 			background-repeat: no-repeat;
 			background-position: center right;
 			background-size: contain;
@@ -628,7 +630,7 @@ body {
 			height: 100%;
 			width: 100%;
 			background-image: url("../img/svg/lemon-logo.svg");
-			background-image: url("/img/svg/lemon-logo.svg");
+			// background-image: url("/img/svg/lemon-logo.svg");
 			background-repeat: no-repeat;
 			background-position: bottom right;
 			background-size: contain;
@@ -668,6 +670,61 @@ body {
 	}
 
 	&__link {
+	}
+}
+
+/* section achievements */
+
+.achievements-section {
+	&__background {
+		z-index: 10;
+		padding: 0px 0px 450px 0px;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, #000000 21.11%, rgba(0, 0, 0, 0.15) 95.74%);
+		}
+	}
+
+	&__elements {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__element {
+		position: relative;
+		max-height: 210px;
+		margin: -325px 0px 0px 0px;
+		z-index: 10;
+	}
+
+	&__element-label {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		min-height: 80px;
+		min-width: 100px;
+		font-weight: 700;
+		font-size: 15px;
+		line-height: 160%;
+		text-transform: uppercase;
+		color: #ffffff;
+		background-position: top right;
+		background-repeat: no-repeat;
+		padding: 95px 0px 0px 0px;
+		&.villas {
+			background-image: url("../img/section-achievements/50.svg");
+		}
+		&.experience {
+			background-image: url("../img/section-achievements/10.svg");
+		}
+		&.customers {
+			background-image: url("../img/section-achievements/85.svg");
+		}
 	}
 }
 
