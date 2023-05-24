@@ -5,7 +5,7 @@
 // Import *.scss =========================================================
 @import "_reset";
 @import "_ibg";
-@import "simple-adaptive-slider";
+@import "slider.scss";
 
 // Set variables ==============================================================
 $baseFont: Raleway;
@@ -880,60 +880,6 @@ body {
 		max-width: 68%;
 		// min-width: 64.1666%;
 		margin: 0px 0px 0px -285px;
-	}
-}
-
-.itcss {
-	&__wrapper {
-	}
-
-	&__items {
-	}
-
-	&__item {
-		text-align: center;
-		background: #ffffff;
-		padding: 31px 34px;
-	}
-
-	&__control {
-		&_prev {
-		}
-
-		&_next {
-		}
-	}
-}
-.item-slide {
-	&__avatar {
-		border-radius: 50%;
-		overflow: hidden;
-		margin: 0px 0px 26px 0px;
-	}
-
-	&__title {
-		font-family: $secondFont;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 130%;
-		text-align: center;
-		color: #333333;
-		margin: 0px 0px 8px 0px;
-	}
-
-	&__text {
-		font-size: 15px;
-		line-height: 160%;
-		text-align: center;
-		color: #333333;
-		margin: 0px 0px 14px 0px;
-	}
-
-	&__lable {
-		font-weight: 700;
-		font-size: 15px;
-		line-height: 160%;
-		color: #333333;
 	}
 }
 
