@@ -5,7 +5,7 @@
 // Import *.scss =========================================================
 @import "_reset";
 @import "_ibg";
-@import "slider.scss";
+@import "simple-adaptive-slider";
 
 // Set variables ==============================================================
 $baseFont: Raleway;
@@ -883,7 +883,7 @@ body {
 	}
 }
 
-.slider {
+.itcss {
 	&__wrapper {
 	}
 
@@ -906,6 +906,8 @@ body {
 }
 .item-slide {
 	&__avatar {
+		border-radius: 50%;
+		overflow: hidden;
 		margin: 0px 0px 26px 0px;
 	}
 
