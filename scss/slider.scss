@@ -3,6 +3,15 @@ $secondFont: "Playfair Display";
 
 .testimonials-section {
 	&__slider {
+		position: relative;
+		display: inline-block;
+		max-width: 68%;
+		// min-width: 64.1666%;
+		margin: 0px 37px 0px -285px;
+		@media (max-width: 768px) {
+			max-width: 100%;
+			margin: -318px 37px 0;
+		}
 	}
 }
 .slider-testimonials {
@@ -11,7 +20,7 @@ $secondFont: "Playfair Display";
 	}
 
 	&__items {
-		margin: 0px 0px 39px 0px;
+		margin: 0;
 	}
 
 	&__item {
@@ -25,7 +34,7 @@ $secondFont: "Playfair Display";
 		top: calc(50% - 10px);
 		z-index: 50;
 		&:hover {
-			background-color: rgba(0, 0, 0, 0.2);
+			background-color: rgba(142, 142, 142, 0.2);
 		}
 		&_prev {
 			background: url("../img/section-testimonials/prev.svg") 0 0 no-repeat;
@@ -39,6 +48,7 @@ $secondFont: "Playfair Display";
 	}
 
 	&__indicators {
+		padding: 39px 0px 0px 0px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -59,6 +69,9 @@ $secondFont: "Playfair Display";
 	&__body {
 		display: flex;
 		gap: 30px;
+		@media (max-width: 425px) {
+			flex-direction: column;
+		}
 	}
 
 	&__card {
