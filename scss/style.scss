@@ -65,9 +65,16 @@ body {
 	&__faq {
 		background: #ffffff;
 	}
+	&__subscribe {
+		background: #f6f7eb;
+	}
 }
 
 .footer {
+	&__body {
+		background: #efeed9;
+		padding: 79px 0px 37px 0px;
+	}
 }
 
 .btn {
@@ -919,9 +926,6 @@ body {
 		}
 	}
 
-	&__container {
-	}
-
 	&__content-body {
 		background-color: #ffffff;
 		margin-left: 48%;
@@ -954,7 +958,7 @@ body {
 
 	&__link {
 		padding: 18px 24px 18px 24px;
-		@media (max-width: 768px) {
+		@media (max-width: 1024px) {
 			padding: 18px 36px 18px 24px;
 		}
 		span {
@@ -986,6 +990,88 @@ body {
 	}
 }
 
+/* section subscribe */
+.subscribe-section {
+	&__body {
+		padding: 68px 0px 63px 0px;
+	}
+
+	&__head {
+		& > * {
+			text-align: center;
+		}
+	}
+
+	&__title {
+		padding: 0px 0px 9px 0px;
+	}
+
+	&__subtitle {
+		font-size: 15px;
+		line-height: 160%;
+		color: #333333;
+		padding: 0px 0px 73px 0px;
+	}
+
+	&__form {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+		padding: 0px 0px 41px 0px;
+		@media (max-width: 1024px) {
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+		& > * {
+			flex: 1 1 auto;
+		}
+		& > *:not(:last-child) {
+			font-size: 15px;
+			line-height: 160%;
+			color: #bdbdbd;
+			background-color: #ffffff;
+			border: 1px solid #e7e7e7;
+			padding: 0px 0px 0px 39px;
+			@media (max-width: 1024px) {
+				padding: 10px 0 10px 39px;
+			}
+		}
+	}
+
+	&__lable {
+		text-align: center;
+		font-size: 15px;
+		line-height: 160%;
+		color: #909090;
+	}
+}
+
+.form-elements {
+	&__fname {
+		background-image: url("../img/subscribe-section/user.svg");
+		background-position: 10px 15px;
+		background-repeat: no-repeat;
+		background-size: 15px 15px;
+	}
+
+	&__lname {
+		background: url("../img/subscribe-section/user.svg");
+		background-position: 10px 15px;
+		background-repeat: no-repeat;
+		background-size: 15px 15px;
+	}
+
+	&__email {
+		background: url("../img/subscribe-section/email.svg");
+		background-position: 10px 15px;
+		background-repeat: no-repeat;
+		background-size: 15px 15px;
+	}
+}
+
 // ============================================================================
 
 // ============================================================================
@@ -995,3 +1081,110 @@ body {
 // ============================================================================
 
 // Footer =====================================================================
+.footer {
+	&__items {
+		display: flex;
+		gap: 63px;
+		@media (max-width: 768px) {
+			flex-direction: column;
+			gap: 20px;
+		}
+	}
+
+	&__item {
+		flex: 1 1 33.3333%;
+		margin: 0px 0px 44px 0px;
+	}
+
+	&__lable {
+		text-align: center;
+		font-size: 15px;
+		line-height: 160%;
+		color: #919191;
+	}
+}
+.aboute-item {
+	&__logo {
+		margin: 0px 0px 18px 0px;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 160%;
+		color: #333333;
+		margin: 0px 0px 21px 0px;
+	}
+
+	&__social {
+		font-family: $secondFont;
+		font-size: 15px;
+		line-height: 233.3333%;
+		color: #495f1d;
+		> a {
+			margin: 0px 0px 0px 10px;
+		}
+		> :first-child {
+			margin: 0px 0px 0px 37px;
+		}
+	}
+}
+.links-item {
+	&__title {
+		font-size: 20px;
+		line-height: 27px;
+		margin: 0px 0px 29px 0px;
+	}
+
+	&__links {
+		display: inline-grid;
+		grid-template: repeat(4, auto) / repeat(2, auto);
+		grid-auto-flow: column;
+		row-gap: 10px;
+		column-gap: 130px;
+		@media (max-width: 425px) {
+			column-gap: 90px;
+		}
+		:last-child {
+			border: 1px solid #909090;
+			line-height: 35px;
+			padding: 0 25px;
+		}
+	}
+
+	&__link {
+		font-size: 15px;
+		line-height: 35px;
+		color: #333333;
+		text-transform: uppercase;
+	}
+}
+
+.contact-item {
+	& > a {
+		display: block;
+		font-size: 15px;
+		line-height: 160%;
+		color: #333333;
+		background-repeat: no-repeat;
+		background-position: 0 4px;
+		padding: 0px 0px 0px 30px;
+		margin: 0px 0px 25px 0px;
+	}
+	&__title {
+		font-size: 20px;
+		line-height: 27px;
+		margin: 0px 0px 29px 0px;
+	}
+
+	&__phone {
+		background-image: url("../img/svg/phone.svg");
+	}
+
+	&__email {
+		background-image: url("../img/svg/email.svg");
+	}
+
+	&__address {
+		background-image: url("../img/svg/place.svg");
+	}
+}
