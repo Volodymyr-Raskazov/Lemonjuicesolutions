@@ -10,7 +10,7 @@ $secondFont: "Playfair Display";
 		margin: 0px 37px 0px -285px;
 		@media (max-width: 768px) {
 			max-width: 100%;
-			margin: -318px 37px 0;
+			margin: -370px 37px 0;
 		}
 	}
 }
@@ -20,7 +20,6 @@ $secondFont: "Playfair Display";
 	}
 
 	&__items {
-		margin: 0;
 	}
 
 	&__item {
@@ -33,17 +32,20 @@ $secondFont: "Playfair Display";
 		width: 20px;
 		top: calc(50% - 10px);
 		z-index: 50;
-		&:hover {
-			background-color: rgba(142, 142, 142, 0.2);
-		}
 		&_prev {
 			background: url("../img/section-testimonials/prev.svg") 0 0 no-repeat;
 			left: -37px;
+			&:hover {
+				background: url("../img/section-testimonials/prev-hover.svg") 0 0 no-repeat;
+			}
 		}
 
 		&_next {
 			background: url("../img/section-testimonials/next.svg") 0 0 no-repeat;
 			right: -37px;
+			&:hover {
+				background: url("../img/section-testimonials/next-hover.svg") 0 0 no-repeat;
+			}
 		}
 	}
 
@@ -62,6 +64,12 @@ $secondFont: "Playfair Display";
 		&.active {
 			background: url("../img/section-testimonials/selected.svg") 0 0 no-repeat;
 		}
+		@media (max-width: 425px) {
+			margin: 350px 0px 0px 0px;
+		}
+		@media (max-width: 320px) {
+			margin: 370px 0px 0px 0px;
+		}
 	}
 }
 
@@ -69,6 +77,7 @@ $secondFont: "Playfair Display";
 	&__body {
 		display: flex;
 		gap: 30px;
+		max-height: 474px;
 		@media (max-width: 425px) {
 			flex-direction: column;
 		}
@@ -87,6 +96,10 @@ $secondFont: "Playfair Display";
 			border-radius: 50%;
 			height: 120px;
 			width: 120px;
+			@media (max-width: 425px) {
+				height: 60px;
+				width: 60px;
+			}
 		}
 	}
 
@@ -98,14 +111,22 @@ $secondFont: "Playfair Display";
 		text-align: center;
 		color: #333333;
 		margin: 0px 0px 8px 0px;
+		@media (max-width: 425px) {
+			font-size: 15px;
+		}
 	}
 
 	&__text {
+		height: 168px;
 		font-size: 15px;
 		line-height: 160%;
 		text-align: center;
+		overflow: auto;
 		color: #333333;
 		margin: 0px 0px 14px 0px;
+		@media (max-width: 425px) {
+			font-size: 12px;
+		}
 	}
 
 	&__lable {
@@ -113,6 +134,9 @@ $secondFont: "Playfair Display";
 		font-size: 15px;
 		line-height: 160%;
 		color: #333333;
+		@media (max-width: 425px) {
+			font-size: 12px;
+		}
 	}
 }
 

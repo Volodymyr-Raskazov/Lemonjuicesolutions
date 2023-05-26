@@ -117,15 +117,12 @@ h6 {
 @media (max-width: 768px) {
   .testimonials-section__slider {
     max-width: 100%;
-    margin: -318px 37px 0;
+    margin: -370px 37px 0;
   }
 }
 
 .slider-testimonials__wrapper {
   position: relative;
-}
-.slider-testimonials__items {
-  margin: 0px 0px 39px 0px;
 }
 .slider-testimonials__item {
   display: none;
@@ -137,18 +134,22 @@ h6 {
   top: calc(50% - 10px);
   z-index: 50;
 }
-.slider-testimonials__btn:hover {
-  background-color: rgba(142, 142, 142, 0.2);
-}
 .slider-testimonials__btn_prev {
   background: url("../img/section-testimonials/prev.svg") 0 0 no-repeat;
   left: -37px;
+}
+.slider-testimonials__btn_prev:hover {
+  background: url("../img/section-testimonials/prev-hover.svg") 0 0 no-repeat;
 }
 .slider-testimonials__btn_next {
   background: url("../img/section-testimonials/next.svg") 0 0 no-repeat;
   right: -37px;
 }
+.slider-testimonials__btn_next:hover {
+  background: url("../img/section-testimonials/next-hover.svg") 0 0 no-repeat;
+}
 .slider-testimonials__indicators {
+  padding: 39px 0px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,12 +169,31 @@ h6 {
 .slider-testimonials__indicator.active {
   background: url("../img/section-testimonials/selected.svg") 0 0 no-repeat;
 }
+@media (max-width: 425px) {
+  .slider-testimonials__indicator {
+    margin: 350px 0px 0px 0px;
+  }
+}
+@media (max-width: 320px) {
+  .slider-testimonials__indicator {
+    margin: 370px 0px 0px 0px;
+  }
+}
 
 .item-slide__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  max-height: 474px;
+}
+@media (max-width: 425px) {
+  .item-slide__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .item-slide__card {
   -webkit-box-flex: 0;
@@ -192,6 +212,12 @@ h6 {
   height: 120px;
   width: 120px;
 }
+@media (max-width: 425px) {
+  .item-slide__avatar img {
+    height: 60px;
+    width: 60px;
+  }
+}
 .item-slide__title {
   font-family: "Playfair Display";
   font-weight: 700;
@@ -201,18 +227,35 @@ h6 {
   color: #333333;
   margin: 0px 0px 8px 0px;
 }
+@media (max-width: 425px) {
+  .item-slide__title {
+    font-size: 15px;
+  }
+}
 .item-slide__text {
+  height: 168px;
   font-size: 15px;
   line-height: 160%;
   text-align: center;
+  overflow: auto;
   color: #333333;
   margin: 0px 0px 14px 0px;
+}
+@media (max-width: 425px) {
+  .item-slide__text {
+    font-size: 12px;
+  }
 }
 .item-slide__lable {
   font-weight: 700;
   font-size: 15px;
   line-height: 160%;
   color: #333333;
+}
+@media (max-width: 425px) {
+  .item-slide__lable {
+    font-size: 12px;
+  }
 }
 
 /* Fading animation */
@@ -291,6 +334,9 @@ body {
 }
 .page-content__testimonials {
   background: #f6f7eb;
+}
+.page-content__faq {
+  background: #ffffff;
 }
 
 .btn {
@@ -562,7 +608,7 @@ body {
 .menu__link:hover {
   text-decoration: underline;
 }
-@media (max-width: 725px) {
+@media (max-width: 768px) {
   .menu__link {
     font-size: 18px;
     line-height: 160%;
@@ -1033,6 +1079,11 @@ body {
     padding-bottom: 155%;
   }
 }
+@media (max-width: 375px) {
+  .achievements-section__background {
+    padding-bottom: 178%;
+  }
+}
 @media (max-width: 320px) {
   .achievements-section__background {
     padding-bottom: 210%;
@@ -1079,7 +1130,7 @@ body {
     margin: -765px 0px 0px 0px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 375px) {
   .achievements-section__elements {
     margin: -680px 0px 0px 0px;
   }
@@ -1197,7 +1248,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 94px 0px 132px 0px;
+  padding: 94px 0px 83px 0px;
+}
+@media (max-width: 1024px) {
+  .testimonials-section__body {
+    padding: 43px 0px 43px 0px;
+  }
 }
 @media (max-width: 768px) {
   .testimonials-section__body {
@@ -1205,24 +1261,118 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 43px 0px 43px 0px;
   }
 }
 .testimonials-section__worldmap {
   display: inline-block;
-  height: 470px;
+  height: 471px;
   width: 800px;
-  min-width: 66.6666px;
   background-image: url("../img/section-testimonials/frame.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-size: contain;
+  background-size: cover;
   padding: 169px 0px 0px 145px;
   margin: 26px 0px 0px -145px;
 }
+@media (max-width: 1024px) {
+  .testimonials-section__worldmap {
+    padding: 169px 0px 0px 0px;
+    margin: 26px 0px 0px 0px;
+  }
+}
 @media (max-width: 768px) {
   .testimonials-section__worldmap {
-    padding: 60px 0px 0px 60px;
+    padding: 30px 0px 0px 30px;
     margin: 0;
   }
+}
+@media (max-width: 925px) {
+  .testimonials-section__title {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+/* section faq */
+.faq-section__body {
+  position: relative;
+}
+.faq-section__body img {
+  position: absolute;
+  max-width: 49%;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 425px) {
+  .faq-section__body img {
+    max-width: 100%;
+  }
+}
+.faq-section__content-body {
+  background-color: #ffffff;
+  margin-left: 48%;
+  padding: 81px 0px 100px 31px;
+}
+@media (max-width: 425px) {
+  .faq-section__content-body {
+    margin-left: 0;
+    padding: 40px 0px 40px 0px;
+  }
+}
+.faq-section__title {
+  margin: 0px 0px 56px 0px;
+}
+@media (max-width: 425px) {
+  .faq-section__title {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(246, 247, 235, 0.8);
+    margin: 0px 0px 26px 0px;
+    text-align: center;
+  }
+}
+.faq-section__tips > *:not(:last-child) {
+  margin: 0px 0px 11px 0px;
+}
+@media (max-width: 425px) {
+  .faq-section__tips {
+    position: relative;
+    z-index: 10;
+  }
+}
+.faq-section__link {
+  padding: 18px 24px 18px 24px;
+}
+@media (max-width: 768px) {
+  .faq-section__link {
+    padding: 18px 36px 18px 24px;
+  }
+}
+.faq-section__link span {
+  position: absolute;
+  top: 24px;
+  right: 18px;
+  height: 12px;
+  width: 12px;
+  background: url("../img/section-faq/next.svg") 0 0 no-repeat;
+}
+.faq-section__tip {
+  position: relative;
+  background: #f6f7eb;
+  font-size: 15px;
+  line-height: 160%;
+  color: #333333;
+}
+@media (max-width: 425px) {
+  .faq-section__tip {
+    background-color: rgba(246, 247, 235, 0.8);
+  }
+}
+.faq-section__tip-text {
+  display: none;
+  overflow: hidden;
+  padding: 20px 20px 24px 24px;
+  max-height: 0;
+  -webkit-transition: max-height 0.3s ease;
+  -o-transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
 }

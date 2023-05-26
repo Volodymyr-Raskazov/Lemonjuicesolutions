@@ -7,15 +7,12 @@
 @media (max-width: 768px) {
   .testimonials-section__slider {
     max-width: 100%;
-    margin: -318px 37px 0;
+    margin: -370px 37px 0;
   }
 }
 
 .slider-testimonials__wrapper {
   position: relative;
-}
-.slider-testimonials__items {
-  margin: 0;
 }
 .slider-testimonials__item {
   display: none;
@@ -27,16 +24,19 @@
   top: calc(50% - 10px);
   z-index: 50;
 }
-.slider-testimonials__btn:hover {
-  background-color: rgba(142, 142, 142, 0.2);
-}
 .slider-testimonials__btn_prev {
   background: url("../img/section-testimonials/prev.svg") 0 0 no-repeat;
   left: -37px;
 }
+.slider-testimonials__btn_prev:hover {
+  background: url("../img/section-testimonials/prev-hover.svg") 0 0 no-repeat;
+}
 .slider-testimonials__btn_next {
   background: url("../img/section-testimonials/next.svg") 0 0 no-repeat;
   right: -37px;
+}
+.slider-testimonials__btn_next:hover {
+  background: url("../img/section-testimonials/next-hover.svg") 0 0 no-repeat;
 }
 .slider-testimonials__indicators {
   padding: 39px 0px 0px 0px;
@@ -59,12 +59,23 @@
 .slider-testimonials__indicator.active {
   background: url("../img/section-testimonials/selected.svg") 0 0 no-repeat;
 }
+@media (max-width: 425px) {
+  .slider-testimonials__indicator {
+    margin: 350px 0px 0px 0px;
+  }
+}
+@media (max-width: 320px) {
+  .slider-testimonials__indicator {
+    margin: 370px 0px 0px 0px;
+  }
+}
 
 .item-slide__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  max-height: 474px;
 }
 @media (max-width: 425px) {
   .item-slide__body {
@@ -91,6 +102,12 @@
   height: 120px;
   width: 120px;
 }
+@media (max-width: 425px) {
+  .item-slide__avatar img {
+    height: 60px;
+    width: 60px;
+  }
+}
 .item-slide__title {
   font-family: "Playfair Display";
   font-weight: 700;
@@ -100,18 +117,35 @@
   color: #333333;
   margin: 0px 0px 8px 0px;
 }
+@media (max-width: 425px) {
+  .item-slide__title {
+    font-size: 15px;
+  }
+}
 .item-slide__text {
+  height: 168px;
   font-size: 15px;
   line-height: 160%;
   text-align: center;
+  overflow: auto;
   color: #333333;
   margin: 0px 0px 14px 0px;
+}
+@media (max-width: 425px) {
+  .item-slide__text {
+    font-size: 12px;
+  }
 }
 .item-slide__lable {
   font-weight: 700;
   font-size: 15px;
   line-height: 160%;
   color: #333333;
+}
+@media (max-width: 425px) {
+  .item-slide__lable {
+    font-size: 12px;
+  }
 }
 
 /* Fading animation */
