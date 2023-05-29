@@ -1,19 +1,6 @@
 $baseFont: Raleway;
 $secondFont: "Playfair Display";
 
-.testimonials-section {
-	&__slider {
-		position: relative;
-		display: inline-block;
-		max-width: 68%;
-		// min-width: 64.1666%;
-		margin: 0px 37px 0px -285px;
-		@media (max-width: 768px) {
-			max-width: 100%;
-			margin: -370px 37px 0;
-		}
-	}
-}
 .slider-testimonials {
 	&__wrapper {
 		position: relative;
@@ -84,6 +71,7 @@ $secondFont: "Playfair Display";
 	}
 
 	&__card {
+		min-width: 0;
 		flex: 0 0 calc(50% - 15px);
 		text-align: center;
 		background: #ffffff;
@@ -118,10 +106,13 @@ $secondFont: "Playfair Display";
 
 	&__text {
 		height: 168px;
+		max-width: 100%;
 		font-size: 15px;
 		line-height: 160%;
 		text-align: center;
-		overflow: auto;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		color: #333333;
 		margin: 0px 0px 14px 0px;
 		@media (max-width: 425px) {

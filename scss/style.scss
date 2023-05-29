@@ -856,7 +856,7 @@ body {
 
 .testimonials-section {
 	&__body {
-		display: flex;
+		position: relative;
 		padding: 94px 0px 83px 0px;
 		@media (max-width: 1024px) {
 			padding: 43px 0px 43px 0px;
@@ -868,27 +868,36 @@ body {
 		// 	padding: 43px 0px 340px 0px;
 		// }
 	}
-	&__worldmap {
-		display: inline-block;
-		height: 471px;
-		width: 800px;
-		background-image: url("../img/section-testimonials/frame.svg");
-		background-repeat: no-repeat;
-		background-position: 0 0;
-		background-size: cover;
-		padding: 169px 0px 0px 145px;
-		margin: 26px 0px 0px -145px;
-		@media (max-width: 1024px) {
-			padding: 169px 0px 0px 0px;
-			margin: 26px 0px 0px 0px;
-		}
+	&__content {
+		position: relative;
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		justify-content: space-between;
+		z-index: 2;
 		@media (max-width: 768px) {
-			padding: 30px 0px 0px 30px;
-			margin: 0;
-			// max-width: 100%;
+			flex-direction: column;
+		}
+	}
+	&__worldmap {
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		padding-bottom: 40%;
+		img {
+			position: absolute;
+			top: 0;
+			left: -280px;
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			@media (max-width: 768px) {
+				left: 0;
+			}
 		}
 	}
 	&__title {
+		flex: 0 0 28%;
 		@media (max-width: 925px) {
 			font-size: 33px;
 			line-height: 44px;
@@ -896,6 +905,18 @@ body {
 	}
 
 	&__slider {
+		flex: 1 1 auto;
+		// position: relative;
+		// display: inline-block;
+		max-width: 60%;
+		// min-width: 64.1666%;
+		margin: 0px 37px 0px;
+		@media (max-width: 768px) {
+			max-width: 90%;
+		}
+		@media (max-width: 425px) {
+			max-width: 85%;
+		}
 	}
 }
 
@@ -904,6 +925,7 @@ body {
 .faq-section {
 	&__body {
 		position: relative;
+		z-index: 2;
 		img {
 			position: absolute;
 			max-width: 49%;
