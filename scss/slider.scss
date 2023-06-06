@@ -67,6 +67,7 @@ $secondFont: "Playfair Display";
 		max-height: 474px;
 		@media (max-width: 425px) {
 			flex-direction: column;
+			max-height: 374px;
 		}
 	}
 
@@ -117,6 +118,7 @@ $secondFont: "Playfair Display";
 		margin: 0px 0px 14px 0px;
 		@media (max-width: 425px) {
 			font-size: 12px;
+			height: 60px;
 		}
 	}
 
